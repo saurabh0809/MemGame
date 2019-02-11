@@ -37,34 +37,34 @@ class _ButtonCState extends State<ButtonC> {
           ),
         ],
       ),
-      body: new Container(
-          margin: new EdgeInsets.all(.0),
-          child: new Row(
-            children: <Widget>[
-              new RaisedButton(
-                onPressed: () {
-                  print('first button');
-                },
-                color: Colors.green,
-                padding: new EdgeInsets.all(40.0),
-                shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(30.0)),
-                child: Text('PLAY',
-                    style: TextStyle(color: Colors.black, fontSize: 20.0)),
-              ),
-              new RaisedButton(
-                onPressed: () {
-                  print('second button');
-                },
-                color: Colors.red,
-                padding: new EdgeInsets.all(40.0),
-                shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(30.0)),
-                child: Text('QUIT',
-                    style: TextStyle(color: Colors.black, fontSize: 20.0)),
-              )
-            ],
-          )),
+      body: Center(
+          child: new Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          new RaisedButton(
+            onPressed: () {
+              print('first button');
+            },
+            color: Colors.green,
+            padding: new EdgeInsets.all(30.0),
+            shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(30.0)),
+            child: Text('PLAY',
+                style: TextStyle(color: Colors.black, fontSize: 20.0)),
+          ),
+          new RaisedButton(
+            onPressed: () {
+              print('second button');
+            },
+            color: Colors.red,
+            padding: new EdgeInsets.all(30.0),
+            shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(30.0)),
+            child: Text('QUIT',
+                style: TextStyle(color: Colors.black, fontSize: 20.0)),
+          )
+        ],
+      )),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.favorite),
         onPressed: () {
