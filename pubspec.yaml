@@ -41,6 +41,12 @@ flutter:
 
   assets:
     - assets/brain.png
+    - assets/avatars/icon1.png
+    - assets/avatars/icon2.png
+    - assets/avatars/icon3.png
+    - assets/avatars/icon4.png
+    - assets/avatars/icon5.png
+    - assets/avatars/icon6.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

@@ -4,6 +4,7 @@ import './pages/Support.dart';
 import './pages/categories.dart';
 import './pages/login.dart';
 import './pages/score.dart';
+import './pages/user.dart';
 //import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.lime,
+        primarySwatch: Colors.teal,
       ),
       title: 'Mem Game',
       initialRoute: '/',
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/forth': (context) => Categories(),
         '/Login': (context) => Login(),
         '/score': (context) => Score(),
+        '/user': (context) => NewUser(),
       },
     );
   }
@@ -39,7 +41,7 @@ class _ButtonCState extends State<ButtonC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lime,
+      backgroundColor: Colors.teal,
       body: Center(
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +51,7 @@ class _ButtonCState extends State<ButtonC> {
             SizedBox(height: 20.0),
             new RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/forth');
+                Navigator.pushNamed(context, '/user');
               },
               color: Colors.green,
               padding:
@@ -173,7 +175,7 @@ class _ImgPage extends State<Img> with SingleTickerProviderStateMixin {
       });
     });
     animation.addStatusListener((status) => print(status));
-    animationController.repeat();
+    animationController.forward();
   }
 
   @override
