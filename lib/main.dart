@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import './pages/Help.dart';
 import './pages/Support.dart';
-import './pages/categories.dart';
 import './pages/login.dart';
 import './pages/score.dart';
 import './pages/user.dart';
+//import './pages/existing.dart';
 //import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
@@ -26,6 +26,8 @@ class MyApp extends StatelessWidget {
         '/Login': (context) => Login(),
         '/score': (context) => Score(),
         '/user': (context) => NewUser(),
+        '/categories': (context) => Categories(),
+        '/existing': (context) => Existing(),
       },
     );
   }
@@ -51,7 +53,7 @@ class _ButtonCState extends State<ButtonC> {
             SizedBox(height: 20.0),
             new RaisedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/user');
+                Navigator.pushNamed(context, '/existing');
               },
               color: Colors.green,
               padding:
